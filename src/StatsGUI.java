@@ -63,7 +63,7 @@ public class StatsGUI extends JFrame implements ActionListener {
             int number = Integer.parseInt(inField.getText());
             statistics.add(number);
             inField.setText("");
-            display.append(String.format("%nAdded %d successfully", number));
+            display.append(String.format("Added %d successfully%n", number));
         }
 
         // if user presses the STATS button
