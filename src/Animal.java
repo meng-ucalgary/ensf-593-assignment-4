@@ -40,7 +40,9 @@ public abstract class Animal {
 
     /**
      * main() creates instances of Animal subclasses and invokes their speak()
-     * methods, their eat() method.
+     * methods, their eat() method. It also invokes doATrick() and preysOn() methods
+     * for those Animal subclasses that implements Trainable and Predator
+     * respectively, illustrating inheritance and polymorphism.
      */
     public static void main(String[] args) {
         Animal animal = new Cow();
@@ -59,5 +61,11 @@ public abstract class Animal {
         System.out.println();
         pet = new Bat();
         System.out.println(pet.doATrick());
+
+        animal = new Hyena();
+        System.out.println(animal.toString());
+        System.out.println("I prey on Cows: " + ((Predator) animal).preysOn(new Cow()));
+        System.out.println("I prey on Cats: " + ((Predator) animal).preysOn(new Cat()));
+        System.out.println("I prey on Bats: " + ((Predator) animal).preysOn(new Bat()));
     }
 }
