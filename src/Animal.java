@@ -51,5 +51,13 @@ public abstract class Animal {
 
         animal = new Bat();
         System.out.println(animal.toString());
+
+        System.out.println();
+        Trainable pet = new Cat();
+        System.out.println(pet.doATrick());
+
+        System.out.println();
+        pet = new Bat();
+        System.out.println(pet.doATrick());
     }
 }

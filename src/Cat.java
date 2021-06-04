@@ -1,11 +1,11 @@
 /**
- * Cat is a subclass of Animal
+ * Cat is a subclass of Animal and implements Trainable
  *
  * @author Bhavyai Gupta
  * @version 1.0
  * @since June 4, 2021
  */
-public class Cat extends Animal {
+public class Cat extends Animal implements Trainable {
     /**
      * Cat() constructor sets its kind variable
      */
@@ -27,5 +27,13 @@ public class Cat extends Animal {
     @Override
     public String eat() {
         return "mice";
+    }
+
+    /**
+     * doATrick() implements the Trainable doATrick() method. Cat can play drum.
+     */
+    @Override
+    public String doATrick() {
+        return "I do tricks. I can play drum.";
     }
 }
