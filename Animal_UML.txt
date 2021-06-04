@@ -1,0 +1,63 @@
+@startuml
+abstract class Animal
+{
+    #kind: String
+    +Animal()
+    +toString(): String
+    +{abstract} speak(): String
+    +{abstract} eat(): String
+    +{static} main(args: String[]): void
+}
+
+interface Trainable
+{
+    +{abstract} doATrick(): String
+}
+
+interface Predator
+{
+    +{abstract} preysOn(animal: Animal): boolean
+}
+
+class Cow
+{
+    +Cow()
+    +speak(): String
+    +eat(): String
+}
+
+Animal <|-- Cow
+
+class Cat
+{
+    +Cat()
+    +speak(): String
+    +eat(): String
+    +doATrick(): String
+}
+
+Animal <|-- Cat
+Trainable <|.. Cat
+
+class Bat
+{
+    +Bat()
+    +speak(): String
+    +eat(): String
+    +doATrick(): String
+}
+
+Animal <|-- Bat
+Trainable <|.. Bat
+
+class Hyena
+{
+    +Hyena()
+    +speak(): String
+    +eat(): String
+    +preysOn(animal: Animal): boolean
+}
+
+Animal <|-- Hyena
+Predator <|.. Hyena
+@enduml
