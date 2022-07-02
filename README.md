@@ -1,20 +1,23 @@
-# a4-polymorphism-arrays
-Playing with polymorphism and arrays.
+# ENSF-593 Assignment 4
+
+An assignment on playing with polymorphism and arrays.
 
 This assignment has two mandatory parts:
+
 - [1. Class menagerie](#1-class-menagerie)
 - [2. Stats GUI](#2-stats-gui)
 
 and two optional part (not graded):
+
 - [Standard Deviation](#optional-standard-deviation)
 - [Coding Trees](#optional-coding-trees)
-
 
 # 1. Class Menagerie
 
 **Objectives**
 
 The objectives of this assignment are
+
 1. To reinforce the concepts of inheritance and polymorphism
 2. To give practice extending classes and implementing interfaces
 
@@ -49,10 +52,10 @@ This project will involve the Animal class, the Cow and Cat subclass, and the su
 skinparam classAttributeIconSize 0
 abstract class Animal{
 
-# kind: String 
-+ Animal() 
-+ toString(): String 
-+ {abstract} speak():String 
+# kind: String
++ Animal()
++ toString(): String
++ {abstract} speak():String
 + {static} main(args: String[])
 
 }
@@ -115,6 +118,7 @@ To test your code, modify the `main()` program to include the following lines:
 Trainable pet = new Cat();
 System.out.println(pet.doATrick());
 ```
+
 Modify `main()` so that it also calls `doATrick()` on the Animal subclass that you created.
 
 _Step 6. Questions._
@@ -136,9 +140,11 @@ To test this method define an `Animal` subclass such as `Wolf` that preys on Cat
 In the markdown file `Animals.md` add the UML class diagram including `Animal`, `Cat`, `Cow`, `Trainable`, `Predator`, your class and the predator test class as an embedded image. Add JavaDoc and comments to all your class additions, classes and interfaces. Include answers to the questions in _step 6_ . Include a screenshot demonstrating successful execution of your program.
 
 # 2. Stats GUI
+
 **Objectives**
 
 The objectives of this lab are:
+
 - To give practice using arrays.
 
 **Problem Statement**
@@ -168,13 +174,15 @@ The GUI contains an input JTextField, an output JTextArea, and two JButtons, one
 You need two Java classes for this project.
 
 `StatsGUI` defines the graphical user interface. It should implement the `ActionListener` interface and should handle the following three actions:
-* JTextField input: Pass the number in the text field to the Stats object
-* STATS Button	: Get the results from the Stats object and display them in the JTextArea.
-* RESET Button: Clear the interface and create a new Stats object.
+
+- JTextField input: Pass the number in the text field to the Stats object
+- STATS Button : Get the results from the Stats object and display them in the JTextArea.
+- RESET Button: Clear the interface and create a new Stats object.
 
 A partial implementation of this class is available at `src/StatsGUI.java`.
 
 `Stats` should keep track of the grades that are typed in and should do the calculation of the mean and the median. It should contain the following elements:
+
 - Instance variables. An `int` array is needed to store the individual grades. This should be declared `private` and should be initialized in the constructor method. Also, a `private` integer variable should be used to count the number of grades that have been stored in the array.
 - Constructor Method. The public constructor method should instantiate the array. Give it 100 elements.
 - The `add(int)` Method. This `public` method takes an `int` parameter, a grade, and inserts it into the next location in the array. It uses the counter variable to determine where the next element goes. Don't forget to increment the count after each insertion.
@@ -185,26 +193,26 @@ A partial implementation of this class is available at `src/StatsGUI.java`.
 
 You are provided a partial implementation of the `src/Stats.java`.
 
-
 **Reporting**
 
-In the markdown file `Stats.md` add the UML class diagram of `StatsGUI` and `Stats`, their dependencies and their relationships. Add JavaDoc and comments to all your class additions. Include a screenshot demonstrating successful execution and outputs of a computing stats of even and odd number of grades. 
+In the markdown file `Stats.md` add the UML class diagram of `StatsGUI` and `Stats`, their dependencies and their relationships. Add JavaDoc and comments to all your class additions. Include a screenshot demonstrating successful execution and outputs of a computing stats of even and odd number of grades.
 
 # Optional: Standard Deviation
+
 In the `StatsGUI` and `Stats` classes add functionality to compute the standard deviation.
 
 Determine the Standard Deviation of the exam grades using the following method.
 
-Raw score method for calculating standard deviation 
+Raw score method for calculating standard deviation
 Consider the exam scores `8,25,7,5,8,3,10,12,9`:
- 
+
 ```
 Determine N, which is the number of scores.
- 
+
 Compute the sum of X and the sum of Xsquared.
- 
+
 Then, calculate the standard deviation as illustrated below.
- 
+
       score(X)   Xsquared
 
          8           64
@@ -221,8 +229,8 @@ Then, calculate the standard deviation as illustrated below.
 
         10          100                  sum of Xsquared = 1161
 
-        12          144 
-   
+        12          144
+
          9           81
 
        ---         ----
@@ -234,7 +242,7 @@ Then, calculate the standard deviation as illustrated below.
 Standard Deviation 	= square root of((sum of Xsquared -((sum of X)*(sum of X)/N))/(N-1))
 
    			= square root((1161-(87*87)/9)/(9-1))
- 
+
    			= square root((1161-(7569/9))/8)
 
    			= square root((1161-841)/8)
@@ -243,10 +251,9 @@ Standard Deviation 	= square root of((sum of Xsquared -((sum of X)*(sum of X)/N)
 
    			= square root(40)
 
- Standard Deviation =  6.32 
+ Standard Deviation =  6.32
 ```
 
 # Optional: Coding Trees
+
 In this video https://www.youtube.com/watch?v=7tCNu4CnjVc Professor Altenkirch presents an object-oriented approach to represent equations. He uses Python. Implement the class hierarchy in Java.
-
-
